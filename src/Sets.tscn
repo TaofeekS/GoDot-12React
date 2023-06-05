@@ -1,0 +1,350 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://src/Sets.gd" type="Script" id=1]
+[ext_resource path="res://src/main_font_64.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/react.png" type="Texture" id=3]
+[ext_resource path="res://src/ButtonsStyles/yellow_normal.tres" type="StyleBox" id=4]
+[ext_resource path="res://src/ButtonsStyles/yellow_pressed.tres" type="StyleBox" id=5]
+[ext_resource path="res://src/giant_font.tres" type="DynamicFont" id=6]
+[ext_resource path="res://assets/two.PNG" type="Texture" id=7]
+[ext_resource path="res://assets/ONE.PNG" type="Texture" id=8]
+[ext_resource path="res://assets/break.png" type="Texture" id=9]
+[ext_resource path="res://assets/done.png" type="Texture" id=10]
+[ext_resource path="res://assets/Rubik-SemiBold.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://assets/icon buttons/round icons/STOP.png" type="Texture" id=12]
+[ext_resource path="res://assets/OpenArrow-Regular.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://assets/audio/0.wav" type="AudioStream" id=14]
+[ext_resource path="res://assets/audio/1.wav" type="AudioStream" id=15]
+[ext_resource path="res://assets/audio/3.wav" type="AudioStream" id=16]
+[ext_resource path="res://assets/audio/4.wav" type="AudioStream" id=17]
+[ext_resource path="res://assets/audio/5.wav" type="AudioStream" id=18]
+[ext_resource path="res://assets/audio/2.wav" type="AudioStream" id=19]
+[ext_resource path="res://assets/audio/7.wav" type="AudioStream" id=20]
+[ext_resource path="res://assets/audio/9.wav" type="AudioStream" id=21]
+[ext_resource path="res://assets/audio/8.wav" type="AudioStream" id=22]
+[ext_resource path="res://assets/audio/6.wav" type="AudioStream" id=23]
+[ext_resource path="res://src/Audio.gd" type="Script" id=24]
+[ext_resource path="res://assets/audio/react.wav" type="AudioStream" id=25]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "countdown"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("1:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 0.5, 1 ),
+"update": 0,
+"values": [ Vector2( 3, 3 ), Vector2( 4, 4 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 1.9 ),
+"transitions": PoolRealArray( 0.5, 0.5, 1 ),
+"update": 0,
+"values": [ Vector2( 3, 3 ), Vector2( 3, 3 ), Vector2( 4, 4 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("React:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2, 3 ),
+"transitions": PoolRealArray( 0.5, 0.5, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 2 ), Vector2( 1, 2 ), Vector2( 2, 4 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("1:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1, 1.5, 1.9, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("React:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 2, 2.5, 2.9, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath("..")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.1, 1.2, 2.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"values": [ {
+"args": [ "1" ],
+"method": "play_count_down"
+}, {
+"args": [ "2" ],
+"method": "play_count_down"
+}, {
+"args": [ "React" ],
+"method": "play_count_down"
+} ]
+}
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=4]
+size = 500
+use_filter = true
+font_data = ExtResource( 11 )
+fallback/0 = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 120
+use_filter = true
+font_data = ExtResource( 11 )
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[node name="Sets" type="Panel"]
+self_modulate = Color( 0, 0, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Countdown" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 4.0
+margin_top = 138.0
+margin_right = 4.0
+margin_bottom = 138.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="Sprite" parent="Countdown" groups=["ToSelfModulate"]]
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 8 )
+
+[node name="2" type="Sprite" parent="Countdown" groups=["ToSelfModulate"]]
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 7 )
+
+[node name="React" type="Sprite" parent="Countdown" groups=["ToSelfModulate"]]
+modulate = Color( 1, 1, 1, 0.4 )
+scale = Vector2( 1.36, 2.72 )
+texture = ExtResource( 3 )
+
+[node name="Break" type="Sprite" parent="Countdown" groups=["ToSelfModulate"]]
+visible = false
+scale = Vector2( 1.8, 3 )
+texture = ExtResource( 9 )
+
+[node name="Done" type="Sprite" parent="Countdown" groups=["ToSelfModulate"]]
+visible = false
+scale = Vector2( 1.8, 3 )
+texture = ExtResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Countdown"]
+anims/countdown = SubResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Countdown"]
+frames = SubResource( 3 )
+
+[node name="CurrentDrill" type="Label" parent="." groups=["ToModulate"]]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.0
+margin_top = -300.0
+margin_right = 400.0
+margin_bottom = 500.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 2, 3 )
+rect_pivot_offset = Vector2( 400, 400 )
+custom_fonts/font = ExtResource( 6 )
+text = "2"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurrentDrillArrow" type="Label" parent="." groups=["ToModulate"]]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -404.0
+margin_top = 12.0
+margin_right = 396.0
+margin_bottom = 812.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 2, 3 )
+rect_pivot_offset = Vector2( 400, 400 )
+custom_fonts/font = SubResource( 4 )
+text = "↕"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SetsLeft" type="Label" parent="." groups=["ToModulate"]]
+visible = false
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -304.0
+custom_fonts/font = SubResource( 5 )
+text = "1 SETS LEFT!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="HBoxContainer" parent="." groups=["ToModulate"]]
+anchor_right = 1.0
+margin_top = 16.0
+margin_bottom = 256.0
+custom_constants/separation = 32
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="Buttons"]
+margin_right = 776.0
+margin_bottom = 240.0
+size_flags_horizontal = 3
+
+[node name="Stop" type="TextureButton" parent="Buttons"]
+modulate = Color( 1, 1, 1, 0.901961 )
+margin_left = 808.0
+margin_right = 1048.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 240, 0 )
+texture_normal = ExtResource( 12 )
+expand = true
+stretch_mode = 5
+
+[node name="Control2" type="Control" parent="Buttons"]
+margin_left = 1080.0
+margin_right = 1080.0
+margin_bottom = 240.0
+
+[node name="Presets" type="Button" parent="Buttons"]
+visible = false
+margin_left = 492.0
+margin_right = 952.0
+margin_bottom = 192.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = SubResource( 6 )
+custom_styles/normal = ExtResource( 4 )
+text = "PRESETS"
+
+[node name="DrillTimer" type="Timer" parent="."]
+
+[node name="WorkTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="BreakTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Audio" type="Node" parent="."]
+script = ExtResource( 24 )
+
+[node name="0" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 14 )
+
+[node name="1" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 15 )
+
+[node name="2" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 19 )
+
+[node name="3" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 16 )
+
+[node name="4" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 17 )
+
+[node name="5" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 18 )
+
+[node name="6" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 23 )
+
+[node name="7" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 20 )
+
+[node name="8" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 22 )
+
+[node name="9" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 21 )
+
+[node name="React" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 25 )
+
+[connection signal="animation_finished" from="Countdown/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="pressed" from="Buttons/Stop" to="." method="_on_Stop_pressed"]
+[connection signal="pressed" from="Buttons/Presets" to="." method="_on_Presets_pressed"]
+[connection signal="timeout" from="DrillTimer" to="." method="_on_DrillTimer_timeout"]
+[connection signal="timeout" from="WorkTimer" to="." method="_on_WorkTimer_timeout"]
+[connection signal="timeout" from="BreakTimer" to="." method="_on_BreakTimer_timeout"]

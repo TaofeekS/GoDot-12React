@@ -1,0 +1,346 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://assets/New/FB  BnW.png" type="Texture" id=1]
+[ext_resource path="res://assets/icon buttons/round icons/SHARE.png" type="Texture" id=2]
+[ext_resource path="res://assets/New/IN  BnW.png" type="Texture" id=3]
+[ext_resource path="res://assets/New/YT  BnW.png" type="Texture" id=4]
+[ext_resource path="res://assets/icon buttons/round icons/RESET.png" type="Texture" id=5]
+[ext_resource path="res://assets/New/www BnW.png" type="Texture" id=6]
+[ext_resource path="res://assets/New/TT  BnW.png" type="Texture" id=7]
+[ext_resource path="res://assets/icon buttons/round icons/KIT.png" type="Texture" id=8]
+[ext_resource path="res://assets/icon buttons/round icons/PRO.png" type="Texture" id=9]
+[ext_resource path="res://src/Links.gd" type="Script" id=10]
+[ext_resource path="res://assets/icon buttons/round icons/LEARN.png" type="Texture" id=11]
+[ext_resource path="res://assets/New/whatsapp.png" type="Texture" id=12]
+[ext_resource path="res://src/ButtonsStyles/panel.tres" type="StyleBox" id=13]
+[ext_resource path="res://src/main_font_64.tres" type="DynamicFont" id=14]
+[ext_resource path="res://src/ButtonsStyles/yellow_disabled.tres" type="StyleBox" id=15]
+[ext_resource path="res://src/ButtonsStyles/yellow_pressed.tres" type="StyleBox" id=16]
+[ext_resource path="res://src/ButtonsStyles/yellow_normal.tres" type="StyleBox" id=17]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="Links" type="HBoxContainer" groups=["ToModulate"]]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 32.0
+margin_top = -160.0
+margin_right = -32.0
+margin_bottom = -32.0
+custom_constants/separation = 16
+alignment = 1
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="12ReactPro" type="TextureButton" parent="."]
+margin_right = 190.0
+margin_bottom = 128.0
+size_flags_horizontal = 3
+texture_normal = ExtResource( 9 )
+expand = true
+stretch_mode = 5
+
+[node name="Share" type="TextureButton" parent="."]
+margin_left = 206.0
+margin_right = 396.0
+margin_bottom = 128.0
+size_flags_horizontal = 3
+texture_normal = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+
+[node name="ShareButtons" type="PopupPanel" parent="Share" groups=["ToModulate"]]
+margin_left = -78.0
+margin_top = -568.0
+margin_right = 650.0
+margin_bottom = -240.0
+custom_styles/panel = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Share/ShareButtons"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+custom_constants/separation = 32
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Share/ShareButtons/VBoxContainer"]
+margin_right = 720.0
+margin_bottom = 65.0
+text = "Share"
+align = 1
+
+[node name="GridContainer" type="GridContainer" parent="Share/ShareButtons/VBoxContainer"]
+margin_top = 97.0
+margin_right = 720.0
+margin_bottom = 288.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = 32
+custom_constants/hseparation = 32
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Facebook" type="TextureButton" parent="Share/ShareButtons/VBoxContainer/GridContainer" groups=["ToSelfModulate"]]
+margin_right = 156.0
+margin_bottom = 191.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 1 )
+expand = true
+stretch_mode = 5
+
+[node name="Whatsapp" type="TextureButton" parent="Share/ShareButtons/VBoxContainer/GridContainer" groups=["ToSelfModulate"]]
+margin_left = 188.0
+margin_right = 344.0
+margin_bottom = 191.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 12 )
+expand = true
+stretch_mode = 5
+
+[node name="Instagram" type="TextureButton" parent="Share/ShareButtons/VBoxContainer/GridContainer" groups=["ToSelfModulate"]]
+margin_left = 376.0
+margin_right = 532.0
+margin_bottom = 191.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+
+[node name="TikTok" type="TextureButton" parent="Share/ShareButtons/VBoxContainer/GridContainer" groups=["ToSelfModulate"]]
+margin_left = 564.0
+margin_right = 720.0
+margin_bottom = 191.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="Control" type="Control" parent="Share/ShareButtons/VBoxContainer"]
+margin_top = 320.0
+margin_right = 720.0
+margin_bottom = 320.0
+
+[node name="Learn" type="TextureButton" parent="."]
+margin_left = 412.0
+margin_right = 603.0
+margin_bottom = 128.0
+size_flags_horizontal = 3
+texture_normal = ExtResource( 11 )
+expand = true
+stretch_mode = 5
+
+[node name="LearnButtons" type="PopupPanel" parent="Learn" groups=["ToModulate"]]
+margin_left = -128.0
+margin_top = -624.0
+margin_right = 640.0
+margin_bottom = -256.0
+custom_styles/panel = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Learn/LearnButtons"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+custom_constants/separation = 32
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Learn/LearnButtons/VBoxContainer"]
+margin_right = 760.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 84 )
+text = "Visit 12React"
+align = 1
+valign = 1
+
+[node name="GridContainer" type="GridContainer" parent="Learn/LearnButtons/VBoxContainer"]
+margin_top = 116.0
+margin_right = 760.0
+margin_bottom = 328.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = 32
+custom_constants/hseparation = 32
+columns = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Facebook" type="TextureButton" parent="Learn/LearnButtons/VBoxContainer/GridContainer" groups=["ToSelfModulate"]]
+margin_right = 126.0
+margin_bottom = 212.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 1 )
+expand = true
+stretch_mode = 5
+
+[node name="YouTube" type="TextureButton" parent="Learn/LearnButtons/VBoxContainer/GridContainer" groups=["ToSelfModulate"]]
+margin_left = 158.0
+margin_right = 284.0
+margin_bottom = 212.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 4 )
+expand = true
+stretch_mode = 5
+
+[node name="Instagram" type="TextureButton" parent="Learn/LearnButtons/VBoxContainer/GridContainer" groups=["ToSelfModulate"]]
+margin_left = 316.0
+margin_right = 442.0
+margin_bottom = 212.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+
+[node name="TikTok" type="TextureButton" parent="Learn/LearnButtons/VBoxContainer/GridContainer" groups=["ToSelfModulate"]]
+margin_left = 474.0
+margin_right = 600.0
+margin_bottom = 212.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="Website" type="TextureButton" parent="Learn/LearnButtons/VBoxContainer/GridContainer" groups=["ToSelfModulate"]]
+margin_left = 632.0
+margin_right = 758.0
+margin_bottom = 212.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+
+[node name="Control" type="Control" parent="Learn/LearnButtons/VBoxContainer"]
+margin_top = 360.0
+margin_right = 760.0
+margin_bottom = 360.0
+
+[node name="Reset" type="TextureButton" parent="."]
+margin_left = 619.0
+margin_right = 809.0
+margin_bottom = 128.0
+size_flags_horizontal = 3
+texture_normal = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+
+[node name="Confirm" type="PopupPanel" parent="Reset" groups=["ToModulate"]]
+margin_left = -323.0
+margin_top = -880.0
+margin_right = 141.0
+margin_bottom = -592.0
+custom_styles/panel = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Reset/Confirm"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 460.0
+margin_bottom = 309.0
+custom_constants/separation = 64
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Reset/Confirm/VBoxContainer"]
+margin_top = 3.0
+margin_right = 456.0
+margin_bottom = 136.0
+text = "Reset Presets 
+To Defaults?"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Reset/Confirm/VBoxContainer"]
+margin_top = 168.0
+margin_right = 456.0
+margin_bottom = 276.0
+
+[node name="ResetNo" type="Button" parent="Reset/Confirm/VBoxContainer/HBoxContainer"]
+margin_right = 226.0
+margin_bottom = 108.0
+size_flags_horizontal = 3
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 14 )
+custom_styles/hover = ExtResource( 17 )
+custom_styles/pressed = ExtResource( 16 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = ExtResource( 15 )
+custom_styles/normal = ExtResource( 17 )
+text = "NO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResetYes" type="Button" parent="Reset/Confirm/VBoxContainer/HBoxContainer"]
+margin_left = 230.0
+margin_right = 456.0
+margin_bottom = 108.0
+size_flags_horizontal = 3
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 14 )
+custom_styles/hover = ExtResource( 17 )
+custom_styles/pressed = ExtResource( 16 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = ExtResource( 15 )
+custom_styles/normal = ExtResource( 17 )
+text = "YES"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Kit" type="TextureButton" parent="."]
+margin_left = 825.0
+margin_right = 1016.0
+margin_bottom = 128.0
+size_flags_horizontal = 3
+texture_normal = ExtResource( 8 )
+expand = true
+stretch_mode = 5
+
+[connection signal="pressed" from="12ReactPro" to="." method="_on_12ReactPro_pressed"]
+[connection signal="pressed" from="Share" to="." method="_on_Share_pressed"]
+[connection signal="pressed" from="Share/ShareButtons/VBoxContainer/GridContainer/Facebook" to="." method="_on_Facebook_pressed" binds= [ true ]]
+[connection signal="pressed" from="Share/ShareButtons/VBoxContainer/GridContainer/Whatsapp" to="." method="_on_Whatsapp_pressed"]
+[connection signal="pressed" from="Share/ShareButtons/VBoxContainer/GridContainer/Instagram" to="." method="_on_Instagram_pressed"]
+[connection signal="pressed" from="Share/ShareButtons/VBoxContainer/GridContainer/TikTok" to="." method="_on_TikTok_pressed"]
+[connection signal="pressed" from="Learn" to="." method="_on_Learn_pressed"]
+[connection signal="pressed" from="Learn/LearnButtons/VBoxContainer/GridContainer/Facebook" to="." method="_on_Facebook_pressed"]
+[connection signal="pressed" from="Learn/LearnButtons/VBoxContainer/GridContainer/YouTube" to="." method="_on_YouTube_pressed"]
+[connection signal="pressed" from="Learn/LearnButtons/VBoxContainer/GridContainer/Instagram" to="." method="_on_Instagram_pressed"]
+[connection signal="pressed" from="Learn/LearnButtons/VBoxContainer/GridContainer/TikTok" to="." method="_on_TikTok_pressed"]
+[connection signal="pressed" from="Learn/LearnButtons/VBoxContainer/GridContainer/Website" to="." method="_on_Website_pressed"]
+[connection signal="pressed" from="Reset" to="." method="_on_Reset_pressed"]
+[connection signal="pressed" from="Reset/Confirm/VBoxContainer/HBoxContainer/ResetNo" to="." method="_on_ResetNo_pressed"]
+[connection signal="pressed" from="Reset/Confirm/VBoxContainer/HBoxContainer/ResetYes" to="." method="_on_ResetYes_pressed"]
+[connection signal="pressed" from="Kit" to="." method="_on_Kit_pressed"]
