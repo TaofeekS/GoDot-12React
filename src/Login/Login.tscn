@@ -59,16 +59,16 @@ __meta__ = {
 [node name="Login" type="VBoxContainer" parent="TabContainer" groups=["ToModulate"]]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_constants/separation = 32
+custom_constants/separation = 40
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label2" type="Label" parent="TabContainer/Login"]
-margin_top = 205.0
+margin_top = 189.0
 margin_right = 952.0
-margin_bottom = 474.0
+margin_bottom = 458.0
 text = "In Order To Access
 All Available Features,
 Login To Your 12React Account
@@ -77,9 +77,9 @@ align = 1
 autowrap = true
 
 [node name="Username" type="LineEdit" parent="TabContainer/Login" groups=["OpensKeyboard"]]
-margin_top = 506.0
+margin_top = 498.0
 margin_right = 952.0
-margin_bottom = 633.0
+margin_bottom = 625.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 11 )
 custom_styles/normal = ExtResource( 14 )
@@ -115,6 +115,15 @@ texture_normal = ExtResource( 3 )
 expand = true
 stretch_mode = 5
 
+[node name="Label" type="Label" parent="TabContainer/Login/HBoxContainer/Register"]
+margin_left = 4.0
+margin_top = 191.0
+margin_right = 462.0
+margin_bottom = 256.0
+text = "REGISTER"
+align = 1
+valign = 1
+
 [node name="Login" type="TextureButton" parent="TabContainer/Login/HBoxContainer"]
 margin_left = 478.0
 margin_right = 952.0
@@ -124,10 +133,19 @@ texture_normal = ExtResource( 13 )
 expand = true
 stretch_mode = 5
 
+[node name="Label" type="Label" parent="TabContainer/Login/HBoxContainer/Login"]
+margin_left = 53.0
+margin_top = 191.0
+margin_right = 433.0
+margin_bottom = 256.0
+text = "LOGIN"
+align = 1
+valign = 1
+
 [node name="Skip" type="Button" parent="TabContainer/Login"]
-margin_top = 897.0
+margin_top = 905.0
 margin_right = 952.0
-margin_bottom = 1097.0
+margin_bottom = 1105.0
 rect_min_size = Vector2( 0, 200 )
 size_flags_horizontal = 3
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -167,9 +185,9 @@ text = "(Data Will Be Saved On This Device)"
 align = 1
 
 [node name="Notification" type="Label" parent="TabContainer/Login"]
-margin_top = 1129.0
+margin_top = 1145.0
 margin_right = 952.0
-margin_bottom = 1194.0
+margin_bottom = 1210.0
 align = 1
 
 [node name="Register" type="VBoxContainer" parent="TabContainer" groups=["ToModulate"]]
