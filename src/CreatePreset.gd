@@ -22,7 +22,6 @@ func _on_AddPreset_visibility_changed():
 
 func clear_all_fields():
 	for le in $DRILLS/Drills.get_children():
-		le.placeholder_text = '-'
 		le.text = ''
 	$"../PresetName/LineEdit".text = ''
 	$TIME/SecondsRange/MinSeconds.text = ''
@@ -42,9 +41,11 @@ func create_new_set():
 	
 	for le in $DRILLS/Drills.get_children():
 		if !le.text.empty():
-			set.drills.append(le.text)
-		elif le.placeholder_text != '-':
-			set.drills.append(le.placeholder_text)
+			var leText = le.text
+			for i in range(leText.length()):
+				var character = leText[i - 1]
+				set.drills.append(character)
+		
 	if set.drills.empty():
 		set.drills.append_array(['1','2','3','4','5'])
 	
@@ -61,6 +62,7 @@ func create_new_set():
 			set.set_name = 'preset' + str(presets)
 		else:
 			set.set_name = 'preset'
+	
 	
 	var minTime = float($TIME/SecondsRange/MinSeconds.text)
 	var maxTime = float($TIME/SecondsRange/MaxSeconds.text)
@@ -135,10 +137,7 @@ func _on_Save_pressed():
 	if !$"../PresetName".visible:
 		var setName: String = ''
 		for le in $DRILLS/Drills.get_children():
-			if !le.text.empty():
-				setName += le.text
-			elif le.placeholder_text != '-':
-				setName += le.placeholder_text
+			setName += le.text
 		if setName.length() > 9:
 			for i in 10:
 				$"../PresetName/LineEdit".text += setName[i]

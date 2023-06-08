@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://src/main_font_64.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/tahomabd.ttf" type="DynamicFontData" id=2]
@@ -87,6 +87,10 @@ corner_radius_bottom_left = 12
 [sub_resource type="StyleBoxEmpty" id=5]
 
 [sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxTexture" id=20]
+margin_left = 30.0
+margin_right = 10.0
 
 [sub_resource type="DynamicFont" id=8]
 size = 57
@@ -406,21 +410,15 @@ margin_right = 1016.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 0, 16 )
 
-[node name="Drills" type="GridContainer" parent="TabContainer/AddPreset/CreatePreset/DRILLS"]
+[node name="Drills" type="VBoxContainer" parent="TabContainer/AddPreset/CreatePreset/DRILLS"]
 margin_top = 32.0
 margin_right = 1016.0
 margin_bottom = 432.0
 rect_min_size = Vector2( 0, 400 )
-custom_constants/vseparation = 22
-custom_constants/hseparation = 32
-columns = 5
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="LineEdit" type="LineEdit" parent="TabContainer/AddPreset/CreatePreset/DRILLS/Drills" groups=["OpensKeyboard"]]
-margin_right = 177.0
-margin_bottom = 118.0
+margin_right = 1016.0
+margin_bottom = 130.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_colors/cursor_color = Color( 0, 0, 0, 1 )
@@ -429,20 +427,36 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 18 )
 custom_styles/focus = SubResource( 7 )
 custom_styles/normal = ExtResource( 17 )
-text = "D"
-align = 1
-max_length = 1
-placeholder_text = "-"
+max_length = 30
 placeholder_alpha = 0.8
 script = ExtResource( 26 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label" type="LineEdit" parent="TabContainer/AddPreset/CreatePreset/DRILLS/Drills/LineEdit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/cursor_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_uneditable = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 18 )
+custom_styles/read_only = SubResource( 20 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = ExtResource( 17 )
+text = "------------------------------"
+max_length = 30
+editable = false
+placeholder_alpha = 0.8
 
 [node name="LineEdit2" type="LineEdit" parent="TabContainer/AddPreset/CreatePreset/DRILLS/Drills" groups=["OpensKeyboard"]]
-margin_left = 209.0
-margin_right = 386.0
-margin_bottom = 118.0
+margin_top = 134.0
+margin_right = 1016.0
+margin_bottom = 265.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_colors/cursor_color = Color( 0, 0, 0, 1 )
@@ -451,168 +465,36 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 18 )
 custom_styles/focus = SubResource( 7 )
 custom_styles/normal = ExtResource( 17 )
-text = "A"
-align = 1
-max_length = 1
-placeholder_text = "-"
-placeholder_alpha = 0.8
-script = ExtResource( 26 )
-
-[node name="LineEdit3" type="LineEdit" parent="TabContainer/AddPreset/CreatePreset/DRILLS/Drills" groups=["OpensKeyboard"]]
-margin_left = 418.0
-margin_right = 595.0
-margin_bottom = 118.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_colors/cursor_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 18 )
-custom_styles/focus = SubResource( 7 )
-custom_styles/normal = ExtResource( 17 )
-align = 1
-max_length = 1
-placeholder_text = "-"
-placeholder_alpha = 0.8
-script = ExtResource( 26 )
-
-[node name="LineEdit4" type="LineEdit" parent="TabContainer/AddPreset/CreatePreset/DRILLS/Drills" groups=["OpensKeyboard"]]
-margin_left = 627.0
-margin_right = 804.0
-margin_bottom = 118.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_colors/cursor_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 18 )
-custom_styles/focus = SubResource( 7 )
-custom_styles/normal = ExtResource( 17 )
-align = 1
-max_length = 1
-placeholder_text = "-"
-placeholder_alpha = 0.8
-script = ExtResource( 26 )
-
-[node name="LineEdit5" type="LineEdit" parent="TabContainer/AddPreset/CreatePreset/DRILLS/Drills" groups=["OpensKeyboard"]]
-margin_left = 836.0
-margin_right = 1013.0
-margin_bottom = 118.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_colors/cursor_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 18 )
-custom_styles/focus = SubResource( 7 )
-custom_styles/normal = ExtResource( 17 )
-align = 1
-max_length = 1
-placeholder_text = "-"
-placeholder_alpha = 0.8
-script = ExtResource( 26 )
-
-[node name="LineEdit6" type="LineEdit" parent="TabContainer/AddPreset/CreatePreset/DRILLS/Drills" groups=["OpensKeyboard"]]
-margin_top = 140.0
-margin_right = 177.0
-margin_bottom = 258.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_colors/cursor_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 18 )
-custom_styles/focus = SubResource( 7 )
-custom_styles/normal = ExtResource( 17 )
-align = 1
-max_length = 1
-placeholder_text = "-"
-placeholder_alpha = 0.8
-script = ExtResource( 26 )
-
-[node name="LineEdit7" type="LineEdit" parent="TabContainer/AddPreset/CreatePreset/DRILLS/Drills" groups=["OpensKeyboard"]]
-margin_left = 209.0
-margin_top = 140.0
-margin_right = 386.0
-margin_bottom = 258.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_colors/cursor_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 18 )
-custom_styles/focus = SubResource( 7 )
-custom_styles/normal = ExtResource( 17 )
-align = 1
-max_length = 1
-placeholder_text = "-"
-placeholder_alpha = 0.8
-script = ExtResource( 26 )
-
-[node name="LineEdit8" type="LineEdit" parent="TabContainer/AddPreset/CreatePreset/DRILLS/Drills" groups=["OpensKeyboard"]]
-margin_left = 418.0
-margin_top = 140.0
-margin_right = 595.0
-margin_bottom = 258.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_colors/cursor_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 18 )
-custom_styles/focus = SubResource( 7 )
-custom_styles/normal = ExtResource( 17 )
-align = 1
-max_length = 1
-placeholder_text = "-"
-placeholder_alpha = 0.8
-script = ExtResource( 26 )
-
-[node name="LineEdit9" type="LineEdit" parent="TabContainer/AddPreset/CreatePreset/DRILLS/Drills" groups=["OpensKeyboard"]]
-margin_left = 627.0
-margin_top = 140.0
-margin_right = 804.0
-margin_bottom = 258.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_colors/cursor_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 18 )
-custom_styles/focus = SubResource( 7 )
-custom_styles/normal = ExtResource( 17 )
-align = 1
-max_length = 1
-placeholder_text = "-"
+max_length = 30
 placeholder_alpha = 0.8
 script = ExtResource( 26 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LineEdit10" type="LineEdit" parent="TabContainer/AddPreset/CreatePreset/DRILLS/Drills" groups=["OpensKeyboard"]]
-margin_left = 836.0
-margin_top = 140.0
-margin_right = 1013.0
-margin_bottom = 258.0
+[node name="Label" type="LineEdit" parent="TabContainer/AddPreset/CreatePreset/DRILLS/Drills/LineEdit2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_colors/cursor_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_uneditable = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 18 )
+custom_styles/read_only = SubResource( 20 )
 custom_styles/focus = SubResource( 7 )
 custom_styles/normal = ExtResource( 17 )
-align = 1
-max_length = 1
-placeholder_text = "-"
+text = "------------------------------"
+max_length = 30
+editable = false
 placeholder_alpha = 0.8
-script = ExtResource( 26 )
 
-[node name="LineEdit11" type="LineEdit" parent="TabContainer/AddPreset/CreatePreset/DRILLS/Drills" groups=["OpensKeyboard"]]
-margin_top = 280.0
-margin_right = 177.0
-margin_bottom = 398.0
+[node name="LineEdit3" type="LineEdit" parent="TabContainer/AddPreset/CreatePreset/DRILLS/Drills" groups=["OpensKeyboard"]]
+margin_top = 269.0
+margin_right = 1016.0
+margin_bottom = 400.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_colors/cursor_color = Color( 0, 0, 0, 1 )
@@ -621,87 +503,31 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 18 )
 custom_styles/focus = SubResource( 7 )
 custom_styles/normal = ExtResource( 17 )
-align = 1
-max_length = 1
-placeholder_text = "-"
+max_length = 30
 placeholder_alpha = 0.8
 script = ExtResource( 26 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="LineEdit12" type="LineEdit" parent="TabContainer/AddPreset/CreatePreset/DRILLS/Drills" groups=["OpensKeyboard"]]
-margin_left = 209.0
-margin_top = 280.0
-margin_right = 386.0
-margin_bottom = 398.0
+[node name="Label" type="LineEdit" parent="TabContainer/AddPreset/CreatePreset/DRILLS/Drills/LineEdit3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_colors/cursor_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_uneditable = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 18 )
+custom_styles/read_only = SubResource( 20 )
 custom_styles/focus = SubResource( 7 )
 custom_styles/normal = ExtResource( 17 )
-align = 1
-max_length = 1
-placeholder_text = "-"
+text = "------------------------------"
+max_length = 30
+editable = false
 placeholder_alpha = 0.8
-script = ExtResource( 26 )
-
-[node name="LineEdit13" type="LineEdit" parent="TabContainer/AddPreset/CreatePreset/DRILLS/Drills" groups=["OpensKeyboard"]]
-margin_left = 418.0
-margin_top = 280.0
-margin_right = 595.0
-margin_bottom = 398.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_colors/cursor_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 18 )
-custom_styles/focus = SubResource( 7 )
-custom_styles/normal = ExtResource( 17 )
-align = 1
-max_length = 1
-placeholder_text = "-"
-placeholder_alpha = 0.8
-script = ExtResource( 26 )
-
-[node name="LineEdit14" type="LineEdit" parent="TabContainer/AddPreset/CreatePreset/DRILLS/Drills" groups=["OpensKeyboard"]]
-margin_left = 627.0
-margin_top = 280.0
-margin_right = 804.0
-margin_bottom = 398.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_colors/cursor_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 18 )
-custom_styles/focus = SubResource( 7 )
-custom_styles/normal = ExtResource( 17 )
-align = 1
-max_length = 1
-placeholder_text = "-"
-placeholder_alpha = 0.8
-script = ExtResource( 26 )
-
-[node name="LineEdit15" type="LineEdit" parent="TabContainer/AddPreset/CreatePreset/DRILLS/Drills" groups=["OpensKeyboard"]]
-margin_left = 836.0
-margin_top = 280.0
-margin_right = 1013.0
-margin_bottom = 398.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_colors/cursor_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 18 )
-custom_styles/focus = SubResource( 7 )
-custom_styles/normal = ExtResource( 17 )
-align = 1
-max_length = 1
-placeholder_text = "-"
-placeholder_alpha = 0.8
-script = ExtResource( 26 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/AddPreset/CreatePreset/DRILLS"]
 margin_top = 448.0

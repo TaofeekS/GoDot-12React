@@ -4,7 +4,8 @@
 [ext_resource path="res://assets/OpenArrow-Regular.ttf" type="DynamicFontData" id=2]
 
 [resource]
-size = 48
+size = 22
 use_filter = true
+extra_spacing_char = 18
 font_data = ExtResource( 1 )
 fallback/0 = ExtResource( 2 )
