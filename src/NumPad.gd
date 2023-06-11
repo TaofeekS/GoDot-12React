@@ -2,6 +2,7 @@ extends GridContainer
 
 
 
+
 func _on_numpad_pressed(number):
 	var target = get_focus_owner()
 	if !target:
@@ -11,6 +12,12 @@ func _on_numpad_pressed(number):
 		if target.is_in_group('EmitChangesOnPads'):
 			target.emit_signal('text_changed', target.text)
 	elif number is String:
+		var groups = target.get_groups()
+		if groups.has("drillLabel"):
+			if target.text.length() == 30:
+				return
+			target.text = target.text + number
+			return
 		target.text = number
 
 

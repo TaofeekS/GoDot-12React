@@ -98,6 +98,13 @@ func _on_SignUp_pressed():
 	
 	if email.find("@") >= 0:
 		$"TabContainer/Register/Notification".text = "Loading.."
+		var data = {
+			"name" : $TabContainer/Register/Name.text,
+			"email" : $TabContainer/Register/RegisterEmail.text,
+			"age" : $TabContainer/Register/RegisterAge.text,
+			"country" : $TabContainer/Register/Country.text
+		}
+		Firebase.set_value("users/user_id", data)
 		Firebase.Auth.signup_with_email_and_password(email, password)
 	else:
 		$"TabContainer/Register/Notification".text = "Email Must Have '@'"

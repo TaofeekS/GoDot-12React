@@ -56,6 +56,7 @@ custom_styles/panel = SubResource( 1 )
 tabs_visible = false
 
 [node name="Login" type="VBoxContainer" parent="TabContainer" groups=["ToModulate"]]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/separation = 80
@@ -87,9 +88,9 @@ placeholder_text = "Email"
 
 [node name="Password" type="LineEdit" parent="TabContainer/Login"]
 visible = false
-margin_top = 933.0
+margin_top = 584.0
 margin_right = 952.0
-margin_bottom = 1015.0
+margin_bottom = 666.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 7 )
 custom_styles/normal = ExtResource( 1 )
@@ -189,7 +190,6 @@ margin_bottom = 1290.0
 align = 1
 
 [node name="Register" type="VBoxContainer" parent="TabContainer" groups=["ToModulate"]]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/separation = 32
